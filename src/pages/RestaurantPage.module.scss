@@ -2,10 +2,17 @@
   width: var(--container-width);
   max-width: 100%;
   margin: 0 auto;
-  padding: 100px 0;
+  padding: 100px calc(var(--gap) / 2);
   display: flex;
   align-items: flex-start;
+  flex-wrap: wrap;
   justify-content: space-between;
+
+  @media only screen and (max-width : 992px) {
+    flex-flow: column-reverse;
+    align-items: center;
+    padding-top: 50px;
+  }
 }
 
 .itemColumn {

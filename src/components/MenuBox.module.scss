@@ -2,6 +2,10 @@
   flex: 1 1 auto;
   margin-top: calc(var(--gap) / 2);
   margin-right: calc(var(--gap) * 2);
+
+  @media only screen and (max-width : 992px) {
+    margin-right: 0;
+  }
 }
 
 .menuTitle {

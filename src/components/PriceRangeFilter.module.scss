@@ -1,5 +1,9 @@
 .filterContainer {
   margin-right: var(--gap);
+
+  @media only screen and (max-width : 767px) {
+    margin: var(--gap) calc(var(--gap) / 2) var(--gap) 0;
+  }
 }
 
 .filterItem {
