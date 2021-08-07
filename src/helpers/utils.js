@@ -13,3 +13,13 @@ export const prepareMenuData = (menu) => {
 
   return resultMenu;
 }
+
+export const generateRandomIdInCollection = (collection, idKey) => {
+  let randomId = 1;
+  if (collection) {
+    const randomNum = Math.floor(Math.random() * collection.length);
+    randomId = collection[randomNum][idKey];
+  }
+
+  return randomId;
+};
