@@ -1,0 +1,76 @@
+.menu {
+  flex: 1 1 auto;
+  margin-top: calc(var(--gap) / 2);
+  margin-right: calc(var(--gap) * 2);
+}
+
+.menuTitle {
+  margin: 0;
+}
+
+.menuBox {
+  margin: calc(var(--gap) / 2) 0;
+  padding: var(--gap);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: calc(var(--gap) / 2);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.menuItemPrice {
+  display: block;
+  min-width: 50px;
+  font-weight: bold;
+}
+
+.menuItemInfo,
+.menuItemControls {
+  display: flex;
+  align-items: center;
+}
+
+.menuItemInfo {
+  margin-right: calc(var(--gap) / 3);
+}
+
+.menuItemControls {
+  button {
+    padding: 2px 8px;
+    background: none;
+    font-size: 18px;
+    color: var(--brand-color);
+
+    &:hover {
+      background: var(--brand-color);
+      color: var(--white);
+    }
+  }
+
+  span {
+    display: block;
+    width: 25px;
+    font-size: 12px;
+    text-align: center;
+  }
+}
+
+.total {
+  text-align: right;
+
+  p {
+    font-weight: bold;
+  }
+}
+
+.successText {
+  color: #24bf8b;
+}

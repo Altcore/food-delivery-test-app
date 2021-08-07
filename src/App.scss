@@ -20,3 +20,25 @@ a {
     text-decoration: none;
   }
 }
+
+button {
+  padding: 10px 15px;
+  border: 2px solid var(--brand-color);
+  border-radius: var(--border-radius);
+  background: var(--brand-color);
+  color: var(--white);
+  cursor: pointer;
+  line-height: 1;
+
+  &:hover {
+    transition: all .2s ease;
+    background: var(--white);
+    color: var(--brand-color);
+  }
+}
+
+input {
+  padding: 10px;
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+}
