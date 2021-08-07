@@ -27,6 +27,8 @@ const RestaurantPage = () => {
   useEffect(() => {
     if (currentRestaurant && currentRestaurant.menu) {
       setMenuItems(prepareMenuData(currentRestaurant.menu));
+      setSuccessfulOrder(false);
+      setTotalPrice(0);
     }
   }, [currentRestaurant]);
 
