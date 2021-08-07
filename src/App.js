@@ -3,6 +3,7 @@ import {Switch, BrowserRouter as Router, Route } from "react-router-dom";
 import RestaurantsContextProvider from "./context/RestaurantsContext";
 import HomePage from "./pages/HomePage";
 import RestaurantPage from "./pages/RestaurantPage";
+import NoMatchPage from "./pages/NoMatchPage";
 import Header from "./components/Header";
 import './App.scss';
 
@@ -18,6 +19,9 @@ const App = () => {
           <Route exact path='/restaurants/:restaurantId'>
             <RestaurantPage />
           </Route>
+          <Route path='*'>
+            <NoMatchPage />
+          </Route>
         </Switch>
       </Router>
     </RestaurantsContextProvider>
@@ -25,4 +29,3 @@ const App = () => {
 };
 
 export default App;
-
