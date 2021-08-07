@@ -23,3 +23,7 @@ export const generateRandomIdInCollection = (collection, idKey) => {
 
   return randomId;
 };
+
+export const isFiltersActive = (activeFilterList) => {
+  return Object.keys(activeFilterList).filter((filter) => activeFilterList[filter] === true).length
+}

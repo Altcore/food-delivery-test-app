@@ -1,0 +1,13 @@
+.filterContainer {
+  margin-right: var(--gap);
+}
+
+.filterItem {
+  margin-left: calc(var(--gap) / 2);
+  vertical-align: middle;
+
+  label {
+    margin-left: 3px;
+    font-weight: bold;
+  }
+}
