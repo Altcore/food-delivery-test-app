@@ -1,0 +1,10 @@
+.itemsContainer {
+  width: var(--container-width);
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.itemsInner {
+  display: flex;
+  flex-wrap: wrap;
+}
