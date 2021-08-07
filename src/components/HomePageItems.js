@@ -3,11 +3,11 @@ import itemsStyles from "./HomePageItems.module.scss";
 import {NUMBER_OF_FEATURED_ITEMS} from "../helpers/constants";
 import PropTypes from "prop-types";
 
-const HomePageItems = ({isLoading, featuredRestaurants, allRestaurants}) => {
+const HomePageItems = ({isLoading, featuredRestaurants, allRestaurants, searchTerm}) => {
   const showFeaturedRestaurants = (featuredItem) => (
     allRestaurants.map((item, index) => {
       return (item.id === featuredItem.restaurantId && index < NUMBER_OF_FEATURED_ITEMS &&
-        <RestaurantCard key = {item.id} item = {item} discount={featuredItem.discount} />
+        <RestaurantCard key={item.id} item={item} highlight={searchTerm} discount={featuredItem.discount} />
       );
     })
   );
@@ -26,7 +26,7 @@ const HomePageItems = ({isLoading, featuredRestaurants, allRestaurants}) => {
         <h2>All Restaurants</h2>
         <div className={itemsStyles.itemsInner}>
           {!isLoading && allRestaurants && allRestaurants.map((item) =>
-            <RestaurantCard key={item.id} item={item} />
+            <RestaurantCard key={item.id} item={item} highlight={searchTerm}/>
           )}
         </div>
       </div>
@@ -38,6 +38,7 @@ HomePageItems.propTypes = {
   isLoading: PropTypes.bool,
   featuredRestaurants: PropTypes.array,
   allRestaurants: PropTypes.array,
+  searchTerm: PropTypes.string,
 }
 
 export default HomePageItems;
